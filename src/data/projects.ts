@@ -5,9 +5,9 @@ export const projects: Project[] = [
     id: 'study-spot',
     title: 'Study Spot',
     description:
-      'A web app helping York University students find free classrooms for studying, used by 5000+ students.',
+      'A web app that shows York University students which classrooms are free to study in. Over 5000 students use it.',
     reflection:
-      "Study Spot came out of a genuinely annoying problem: not knowing which YorkU classrooms were actually free to study in. Built with two teammates using official YorkU scheduling data, it's now used by over 5,000 students — which taught me more about the unglamorous parts of shipping software, uptime, real users hitting edge cases, actually maintaining something, than any class project could.",
+      "I got tired of walking around campus looking for an empty room to study in, so two friends and I built this using YorkU's official class schedules. Over 5,000 students use it now. Having real people depend on it taught me a lot about keeping a site up, fixing weird bugs users find, and maintaining something long term. That's stuff I never really ran into with class projects.",
     tags: ['SW'],
     technologies: [
       'React',
@@ -29,9 +29,9 @@ export const projects: Project[] = [
     id: 'asl-interpreter',
     title: 'Sign Language Interpreter',
     description:
-      'A computer-vision web app that translates ASL hand gestures into English text in real time.',
+      'A computer vision web app that turns ASL hand signs into English text in real time.',
     reflection:
-      "I wanted to see if I could make sign language recognition accessible without specialized hardware — just a webcam, OpenCV, and MediaPipe for hand tracking, feeding into a SciKit model trained to recognize ASL alphabet gestures. Wrapping it in Flask and React made it usable directly in a browser, which mattered more to me than squeezing out marginal accuracy gains.",
+      "I wanted to see if sign language recognition could work with nothing but a regular webcam. It uses OpenCV and MediaPipe to track your hand, then a SciKit model I trained guesses which ASL letter you're signing. I put it behind Flask and React so anyone can try it in their browser, which I cared about more than chasing a few extra percent of accuracy.",
     tags: ['SW', 'ML'],
     technologies: [
       'Python',
@@ -55,9 +55,9 @@ export const projects: Project[] = [
     id: 'dafp',
     title: 'Blockchain Fundraising Platform',
     description:
-      'A decentralized fundraising platform where investors fund tokenized startup DAOs with USDC. Hack the North 2024 winner.',
+      'A decentralized fundraising platform where investors back tokenized startup DAOs using USDC. Won at Hack the North 2024.',
     reflection:
-      "Built in 36 hours at Hack the North 2024 with a team of four, this was my first real foray into Solidity — a decentralized fundraising platform where investors fund tokenized startup DAOs with USDC. Winning mattered less than what it forced: learning smart contract patterns fast enough to ship something that actually worked under a deadline, with three other people relying on the pieces I owned.",
+      "Four of us built this in 36 hours at Hack the North 2024, and it was my first time writing Solidity. I had to learn how smart contracts work on the fly because the rest of the team was waiting on my parts. Winning was awesome, but honestly the best part was getting something working that fast.",
     tags: ['SW'],
     technologies: [
       'React',
@@ -78,9 +78,9 @@ export const projects: Project[] = [
     id: 'fpga-ocr',
     title: 'FPGA Optical Character Recognition',
     description:
-      'A neural network implemented in Verilog RTL on an FPGA to classify handwritten MNIST digits in hardware.',
+      'A neural network written in Verilog that runs on an FPGA and recognizes handwritten MNIST digits.',
     reflection:
-      "This was my first time building a neural network from the transistor level up, in a manner of speaking — every matrix multiplication, ReLU activation, and memory access implemented as RTL rather than a framework call. Getting UART RX working reliably to feed digit images in from a touchscreen, then watching the FSM classify handwritten MNIST digits entirely in hardware, made the abstraction stack between software ML and silicon feel a lot less abstract.",
+      "Normally a neural network is a few lines of PyTorch. Here every matrix multiply, ReLU, and memory read had to be written by hand in Verilog. The hardest part was getting UART working reliably so I could send drawings over from a touchscreen. Seeing the board actually classify my handwriting was super satisfying, and it made me understand what ML looks like at the hardware level.",
     tags: ['HW', 'ML'],
     technologies: ['Verilog', 'Python'],
     github: 'https://github.com/AmmarMo123/FPGA-Digit-Classifier',
@@ -94,9 +94,9 @@ export const projects: Project[] = [
     id: 'fpga-tetris',
     title: 'FPGA Tetris',
     description:
-      'An FPGA-based Tetris game with real-time gameplay driven by a state machine and displayed via VGA.',
+      'Tetris running on an FPGA, driven by a state machine and displayed over VGA.',
     reflection:
-      "Built with a partner on a DE10-Lite board, this was a crash course in the difference between writing game logic in software and writing it as a state machine with no call stack to lean on. Every falling piece, collision check, and line clear had to be expressed as hardware state transitions, with gameplay rendered live over VGA — no compiler forgiving a sloppy design here.",
+      "A friend and I built this on a DE10-Lite board. Writing a game in hardware is really different from writing one in code since there are no functions or loops to fall back on. Falling pieces, collisions, and clearing lines all had to be states in a state machine, and the whole thing draws to a monitor over VGA.",
     tags: ['HW'],
     technologies: ['Verilog'],
     github: 'https://github.com/AmmarMo123/FPGA-tetris',
@@ -110,9 +110,9 @@ export const projects: Project[] = [
     id: 'pipelined-cpu',
     title: 'Pipelined CPU',
     description:
-      'A pipelined 32-bit RISC-V processor built in Verilog with a full instruction/execute/writeback datapath.',
+      'A pipelined 32 bit RISC-V processor written in Verilog.',
     reflection:
-      "Designing a pipelined RISC-V processor in Verilog meant confronting pipeline hazards directly instead of reading about them in a textbook. Fetch, decode, execute, memory, writeback — each stage is straightforward in isolation, but making them work together correctly across a 32-bit datapath, without silently corrupting state on a hazard, is where the actual learning happened.",
+      "I learned about pipeline architecture in class, but building this is when they actually clicked. Fetch, decode, execute, memory, and writeback are each pretty simple by themselves. Getting all five to run at once without instructions stepping on each other took a lot of debugging, and that's where I learned the most.",
     tags: ['HW'],
     technologies: ['Verilog', 'RISC-V'],
     github: 'https://github.com/AmmarMo123/CPU-in-verilog',

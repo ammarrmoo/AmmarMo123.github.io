@@ -23,9 +23,6 @@ export function Sidebar({ profile }: SidebarProps) {
             src="sidebar/this-is-fine.gif"
             alt="This is fine"
           />
-          <figcaption className={styles.gifCaption}>
-            This is my favourite meme, would love to hear what yours is
-          </figcaption>
         </figure>
         <ContactLinks contact={profile.contact} />
         {/* <RotatingClock /> */}

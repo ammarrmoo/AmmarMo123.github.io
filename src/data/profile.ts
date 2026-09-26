@@ -25,7 +25,7 @@ export const profile: Profile = {
   },
   contact: {
     email: 'ammarrmoo@gmail.com',
-    linkedin: 'https://linkedin.com/in/ammarmo',
-    github: 'https://github.com/ammarmo123',
+    linkedin: 'https://www.linkedin.com/in/ammarrmoo/',
+    github: 'https://github.com/ammarrmoo',
   },
 };
