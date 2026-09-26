@@ -58,6 +58,13 @@
   border: 1px solid var(--color-border);
 }
 
+.gifCaption {
+  font-size: 0.72rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--color-text-faint);
+}
+
 .contact {
   flex-shrink: 0;
   padding-top: var(--space-lg);

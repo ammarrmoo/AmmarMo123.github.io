@@ -23,6 +23,7 @@ export function Sidebar({ profile }: SidebarProps) {
             src="sidebar/this-is-fine.gif"
             alt="This is fine"
           />
+          <figcaption className={styles.gifCaption}>Powered by coffee</figcaption>
         </figure>
         <ContactLinks contact={profile.contact} />
         {/* <RotatingClock /> */}
