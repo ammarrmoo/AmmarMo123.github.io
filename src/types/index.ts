@@ -12,7 +12,6 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  reflection: string;
   tags: ProjectTag[];
   technologies: string[];
   github: string;
